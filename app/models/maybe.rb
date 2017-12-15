@@ -1,0 +1,2 @@
+class Maybe < ApplicationRecord
+end
