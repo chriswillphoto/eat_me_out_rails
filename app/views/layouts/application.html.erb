@@ -8,6 +8,19 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav>
+    <div>
+      <%= link_to 'Restaurant Listings', restaurants_path %>
+      <%= link_to 'Add New Listing', new_restaurant_path %>
+    </div>
+    <br />
+    <br />
+    <div>
+      <%= link_to 'Category List', categories_path %>
+      <%= link_to 'Add New Category', new_category_path %>
+    </div>
+  </nav>
+
   <body>
     <%= yield %>
   </body>
