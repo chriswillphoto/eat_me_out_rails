@@ -1,0 +1,10 @@
+<h1>Restaurant Index</h1>
+
+<% @restaurants.each do | restaurant | %>
+  <ul>
+    <li><%= restaurant.name %></li>
+    <li><%= restaurant.description %></li>
+    <li><%= restaurant.suburb %></li>
+    <li><%= restaurant.price %></li>
+  </ul>
+<% end %>
