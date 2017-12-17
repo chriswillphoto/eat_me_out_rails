@@ -1,8 +1,8 @@
 User.destroy_all
 
-u1 = User.create :name => 'Sam', :email => 'sam@cordandberg.com'
-u2 = User.create :name => 'John', :email => 'john@ga.co'
-u3 = User.create :name => 'Jane', :email => 'jane@ga.co'
+u1 = User.create :name => 'Sam', :email => 'sam@cordandberg.com', :password => 'chicken'
+u2 = User.create :name => 'John', :email => 'john@ga.co', :password => 'chicken'
+u3 = User.create :name => 'Jane', :email => 'jane@ga.co', :password => 'chicken'
 
 Restaurant.destroy_all
 

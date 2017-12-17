@@ -10,7 +10,7 @@
 #
 
 class User < ApplicationRecord
-  # has_secure_password
+  has_secure_password
 
   has_one :favourites
   has_one :maybes
@@ -18,6 +18,6 @@ class User < ApplicationRecord
   has_many :dislikes
 
 
-  # validates :email, :presence => true, :uniqueness => true
+  validates :email, :presence => true, :uniqueness => true
 
 end
