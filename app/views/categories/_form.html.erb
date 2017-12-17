@@ -1,0 +1,10 @@
+<%= form_for @category do | f | %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true, :placeholder => 'Eg. Greek' %>
+  </fieldset>
+  <label></label>
+  <fieldset>
+    <%= f.submit "Add" %>
+  </fieldset>
+<% end %>
