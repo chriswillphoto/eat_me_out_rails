@@ -6,5 +6,8 @@
     <li><%= restaurant.description %></li>
     <li><%= restaurant.suburb %></li>
     <li><%= restaurant.price %></li>
+    <div class="controls">
+      <%= link_to 'Edit', edit_restaurant_path(restaurant.id) %>
+    </div>
   </ul>
 <% end %>

@@ -1,0 +1,21 @@
+<%= form_for @restaurant do | f | %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true, :placeholder => 'Restaurant/Cafe Name' %>
+    <%= f.label :address %>
+    <%= f.text_field :address, :required => true, :placeholder => 'Follow format: 4 Rock St, Surry Hills, NSW 2010' %>
+    <%= f.label :suburb %>
+    <%= f.text_field :suburb, :required => true, :placeholder => 'Eg. Surry Hills' %>
+    <%= f.label :description %>
+    <%= f.text_field :description, :required => true, :placeholder => 'Short description' %>
+    <%= f.label :price %>
+    <%= f.text_field :price, :required => true, :placeholder => 'Follow format: $20-30 a main' %>
+  </fieldset>
+  <label></label>
+  <fieldset>
+    <%= f.submit "Update" %>
+  </fieldset>
+<% end %>
+
+<br />
+<%= button_to 'Delete Item', @restaurant, :method => 'delete', :data => { :confirm => 'Are you sure? This item will be deleted forever'} %>
