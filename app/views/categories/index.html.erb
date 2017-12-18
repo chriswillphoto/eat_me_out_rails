@@ -1,0 +1,10 @@
+<h1>All Categories</h1>
+
+<% @categories.each do | category | %>
+  <ul>
+    <li><%= category.name %></li>
+    <div class="controls">
+      <%= link_to 'Edit', edit_category_path(category.id) %>
+    </div>
+  </ul>
+<% end %>

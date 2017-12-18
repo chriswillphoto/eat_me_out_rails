@@ -11,7 +11,7 @@
 
 class User < ApplicationRecord
   has_secure_password
-  
+
   has_one :favourites
   has_one :maybes
   has_many :likes
