@@ -9,6 +9,7 @@ class FavouritesController < ApplicationController
     else
       favourite.restaurants.delete(restaurant)
   end
+end
 
   private
   def favourite_params

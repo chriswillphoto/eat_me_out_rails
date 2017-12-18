@@ -2,16 +2,14 @@
 #
 # Table name: restaurants
 #
-#  id            :integer          not null, primary key
-#  name          :text
-#  address       :text
-#  suburb        :text
-#  description   :text
-#  price         :integer
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
-#  opening_hours :text
-#  image         :text
+#  id          :integer          not null, primary key
+#  name        :text
+#  address     :text
+#  suburb      :text
+#  description :text
+#  price       :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 
 class Restaurant < ApplicationRecord

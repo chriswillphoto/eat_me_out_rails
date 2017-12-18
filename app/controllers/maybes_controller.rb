@@ -8,7 +8,8 @@ class MaybesController < ApplicationController
       maybe.restaurants << restaurant
     else
       maybe.restaurants.delete(restaurant)
-  end
+    end
+end
 
   private
   def maybe_params
