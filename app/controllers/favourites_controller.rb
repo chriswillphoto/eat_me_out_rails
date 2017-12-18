@@ -2,7 +2,12 @@ class FavouritesController < ApplicationController
 
   def update
     favourite = Favourite.find params[:id]
-    favourite.update favourite_params
+    restaurant = Restaurant.find params [:favourite][:restaurant_id]
+
+    unless favourite.restaurants.include? restaurant
+      favourite.restaurants << restaurant
+    else
+      favourite.restaurants.delete(restaurant)
   end
 
   private
