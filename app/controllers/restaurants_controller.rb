@@ -14,6 +14,11 @@ class RestaurantsController < ApplicationController
     redirect_to restaurants_path
   end
 
+  def show
+    restaurant = Restaurant.find params[:id]
+    render :json => restaurant.to_json()
+  end
+
   def edit
     @restaurant = Restaurant.find params[:id]
   end
