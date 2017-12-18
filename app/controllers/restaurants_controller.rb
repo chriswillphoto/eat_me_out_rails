@@ -2,6 +2,7 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.all
+    render :json => @restaurants.to_json()
   end
 
   def new
@@ -11,6 +12,11 @@ class RestaurantsController < ApplicationController
   def create
     restaurant = Restaurant.create restaurant_params
     redirect_to restaurants_path
+  end
+
+  def show
+    restaurant = Restaurant.find params[:id]
+    render :json => restaurant.to_json()
   end
 
   def edit
