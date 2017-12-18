@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20171217231052) do
     t.text "suburb"
     t.text "description"
     t.integer "price"
+    t.text "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "opening_hours"
