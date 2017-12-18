@@ -1,5 +1,7 @@
 class FavouritesController < ApplicationController
 
+  before_action :authenticate_request
+
   def update
     favourite = Favourite.find params[:id]
     restaurant = Restaurant.find params [:favourite][:restaurant_id]

@@ -1,4 +1,7 @@
 class LikesController < ApplicationController
+
+  before_action :authenticate_request
+
   def create
     like = Like.new
     like.user_id = params[:like][:user_id]
@@ -15,5 +18,5 @@ class LikesController < ApplicationController
   def like_params
     params.require(:like).permit(:user_id, :restaurant_id)
   end
-  
+
 end

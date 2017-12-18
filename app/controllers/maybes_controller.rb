@@ -1,5 +1,8 @@
 class MaybesController < ApplicationController
 
+  before_action :authenticate_request
+  
+
   def update
     maybe = Maybe.find params[:id]
     restaurant = Restaurant.find params [:maybe][:restaurant_id]
