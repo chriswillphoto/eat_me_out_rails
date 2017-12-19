@@ -1,5 +1,7 @@
 class RestaurantsController < ApplicationController
 
+  before_action :authenticate_request!, :only => [:update_maybe, :update_favourites]
+
   def index
     @restaurants = Restaurant.all
     render :json => @restaurants.to_json()
@@ -24,9 +26,16 @@ class RestaurantsController < ApplicationController
   end
 
   def update
+  end
+
+  def update_maybe
     restaurant = Restaurant.find params[:id]
-    restaurant.update restaurant_params
-    redirect_to restaurants_path
+    @current_user.maybe.restaurants << restaurant
+  end
+
+  def update_favourites
+    restaurant = Restaurant.find params[:id]
+    @current_user.favourite.restaurants << restaurant
   end
 
   def destroy

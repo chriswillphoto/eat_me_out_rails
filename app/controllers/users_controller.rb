@@ -30,7 +30,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    render json: @current_user.to_json(:include => { :favourite => {:only => [:restaurants]}, :maybe => {:only => [:restaurants]} })
+    info = [@current_user, @current_user.favourite.restaurants.map {|r| r.id}, @current_user.maybe.restaurants.map {|r| r.id}]
+    render json: info.to_json()
   end
 
 

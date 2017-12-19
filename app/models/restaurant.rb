@@ -8,6 +8,7 @@
 #  suburb        :text
 #  description   :text
 #  price         :integer
+#  phone_number  :text
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  opening_hours :text
