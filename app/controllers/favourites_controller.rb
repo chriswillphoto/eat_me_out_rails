@@ -1,10 +1,10 @@
 class FavouritesController < ApplicationController
 
-  before_action :authenticate_request
+  before_action :authenticate_request!
 
   def update
-    favourite = Favourite.find params[:id]
-    restaurant = Restaurant.find params [:favourite][:restaurant_id]
+    favourite = @current_user.favourite
+    restaurant = Restaurant.find params[:restaurant_id]
 
     unless favourite.restaurants.include? restaurant
       favourite.restaurants << restaurant

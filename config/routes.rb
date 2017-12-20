@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   resources :categories
   resources :users
 
+  put "/favourites" => "favourites#update"
+  put "/maybes" => "maybes#update"
   put "/restaurants/:id/maybe" => "restaurants#update_maybe"
   put "/restaurants/:id/fave" => "restaurants#update_favourites"
   get '/profile' => "users#show"

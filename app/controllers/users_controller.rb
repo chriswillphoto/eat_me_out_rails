@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    info = [@current_user, @current_user.favourite.restaurants.map {|r| r.id}, @current_user.maybe.restaurants.map {|r| r.id}]
+    info = [@current_user, @current_user.favourite.restaurants.map {|r| r.id}, @current_user.maybe.restaurants.map {|r| r.id}, @current_user.favourite.restaurants, @current_user.maybe.restaurants]
     render json: info.to_json()
   end
 
