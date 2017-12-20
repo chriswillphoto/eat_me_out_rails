@@ -5,9 +5,9 @@
   </fieldset>
   <label></label>
   <fieldset>
-    <%= f.submit "Update" %>
+    <%= f.submit "UPDATE", :class => "updateButton" %>
   </fieldset>
 <% end %>
 
 <br />
-<%= button_to 'Delete Category', @category, :method => 'delete', :data => { :confirm => 'Are you sure? This category will be deleted forever' } %>
+<%= button_to 'DELETE', @category, :method => 'delete', :class=> "deleteButton", :data => { :confirm => 'Are you sure? This category will be deleted forever' } %>

@@ -1,19 +1,24 @@
-<h1>Add New Listing</h1>
+<h1 class="heading">ADD NEW LISTING</h1>
 
 <%= render :partial => 'form' %>
 
-<h2>All Restaurants</h2>
+<h2 class="heading">ALL RESTAURANTS</h2>
 
 <% @restaurants.each do | restaurant | %>
-  <ul>
-    <li><%= restaurant.name %></li>
-    <li><%= restaurant.description %></li>
-    <li><%= restaurant.suburb %></li>
-    <li><%= restaurant.price %></li>
-    <li><%= restaurant.opening_hours %></li>
-    <li><img src="<%= restaurant.image %>"></li>
+  <ul class="restList">
+    <li class="restItem">Name:  <%= restaurant.name %></li>
+    <br />
+    <li class="restItem">Description:  <%= restaurant.description %></li>
+    <br />
+    <li class="restItem">Suburb:  <%= restaurant.suburb %></li>
+    <br />
+    <li class="restItem">Price(1 out of 4):  <%= restaurant.price %></li>
+    <br />
+    <li class="restItem">Opening hours: <%= restaurant.opening_hours %></li>
+    <br />
+    <li><img src="<%= restaurant.image %>" class="images"></li>
     <div class="controls">
-      <%= link_to 'Edit', edit_restaurant_path(restaurant.id) %>
+      <%= link_to 'Edit', edit_restaurant_path(restaurant.id), :class=> "editLinks" %>
     </div>
   </ul>
 <% end %>

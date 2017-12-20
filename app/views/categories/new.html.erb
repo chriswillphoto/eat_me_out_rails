@@ -1,14 +1,14 @@
-<h1>Add New Category</h1>
+<h1 class="heading">ADD NEW CATEGORY</h1>
 
 <%= render :partial => 'form' %>
 
-<h2>All Categories</h2>
+<h2 class="heading">ALL CATEGORIES</h2>
 
 <% @categories.each do | category | %>
   <ul>
-    <li><%= category.name %></li>
+    <li class="item"><%= category.name %></li>
     <div class="controls">
-      <%= link_to 'Edit', edit_category_path(category.id) %>
+      <%= link_to 'Edit', edit_category_path(category.id), :class=> "editLinks" %>
     </div>
   </ul>
 <% end %>

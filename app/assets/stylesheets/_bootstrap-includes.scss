@@ -6,9 +6,130 @@ body {
   margin: auto;
 }
 
+//////////////////////ADMIN ADD & EDIT PAGES///////////////////////
+
+//nav
+
+.navItem {
+  display: inline;
+  margin-right: 40px;
+  font-size: 16px;
+  color: black;
+}
+
+.navItem:hover {
+  border-bottom: 4px black solid;
+  text-decoration: none;
+}
+
+
+//forms
+
+.heading {
+  font-size: 36px;
+  border-bottom: 8px black solid;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+label {
+  padding-bottom: 7px;
+  font-size: 20px;
+}
+
 .formField {
   display: block;
   margin: auto;
   width: 450px;
   height: 50px;
+  border: black 1px solid;
+  padding: 8px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+//update buttons
+
+.updateButton {
+  font-size: 29px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #0bf39f;
+  border: none;
+  padding: 7px;
+  width: 288px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+//red delete item button
+
+.deleteButton {
+  font-size: 29px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #f44336;
+  border: none;
+  padding: 7px;
+  width: 288px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+//add buttons
+
+.addButton {
+  font-size: 29px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  padding: 7px;
+  width: 288px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.editLinks {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.editLinks:hover {
+  color: black;
+}
+
+.item {
+  color: black;
+  font-size: 20px;
+}
+
+.restList {
+  border-bottom: black 4px solid;
+  padding-bottom: 30px;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.restItem {
+  color: black;
+  font-size: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.images {
+  width: 400px;
+  height: 250px;
+  border: 3px black solid;
 }

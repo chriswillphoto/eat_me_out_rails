@@ -13,13 +13,13 @@
     <%= f.text_field :description, :required => true, :placeholder => 'Short description', :class => 'formField' %>
     <br />
     <%= f.label :price %>
-    <%= f.text_field :price, :required => true, :placeholder => 'Follow format: $20-30 a main', :class => 'formField' %>
+    <%= f.text_field :price, :required => true, :placeholder => 'Follow format: 1=$ 2=$$ 3=$$$ 4=$$$$', :class => 'formField' %>
   </fieldset>
   <label></label>
   <fieldset>
-    <%= f.submit "Update" %>
+    <%= f.submit "UPDATE", :class => "updateButton" %>
   </fieldset>
 <% end %>
 
 <br />
-<%= button_to 'Delete Listing', @restaurant, :method => 'delete', :data => { :confirm => 'Are you sure? This listing will be deleted forever'} %>
+<%= button_to 'DELETE', @restaurant, :method => 'delete', :class=> "deleteButton", :data => { :confirm => 'Are you sure? This listing will be deleted forever'} %>

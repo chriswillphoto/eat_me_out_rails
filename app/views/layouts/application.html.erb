@@ -10,17 +10,13 @@
 
   <nav>
     <div>
-      <%= link_to 'Restaurant Listings', restaurants_path %>
-      <%= link_to 'Add New Listing', new_restaurant_path %>
-    </div>
-    <br />
-    <div>
-      <%= link_to 'Category List', categories_path %>
-      <%= link_to 'Add New Category', new_category_path %>
-    </div>
-    <br />
-    <div>
-      <%= link_to 'Users List', users_path %>
+      <%= link_to 'Restaurant Listings', restaurants_path, :class => "navItem" %>
+      <%= link_to 'Add New Listing', new_restaurant_path, :class => "navItem" %>
+
+      <%= link_to 'Category List', categories_path, :class => "navItem" %>
+      <%= link_to 'Add New Category', new_category_path, :class => "navItem" %>
+
+      <%= link_to 'Users List', users_path, :class => "navItem" %>
     </div>
   </nav>
 
