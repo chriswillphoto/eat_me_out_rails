@@ -1,3 +1,19 @@
 <h1>Add New Listing</h1>
 
 <%= render :partial => 'form' %>
+
+<h2>All Restaurants</h2>
+
+<% @restaurants.each do | restaurant | %>
+  <ul>
+    <li><%= restaurant.name %></li>
+    <li><%= restaurant.description %></li>
+    <li><%= restaurant.suburb %></li>
+    <li><%= restaurant.price %></li>
+    <li><%= restaurant.opening_hours %></li>
+    <li><img src="<%= restaurant.image %>"></li>
+    <div class="controls">
+      <%= link_to 'Edit', edit_restaurant_path(restaurant.id) %>
+    </div>
+  </ul>
+<% end %>

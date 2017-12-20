@@ -53,3 +53,6 @@ c7 = Category.create :name => 'Italian'
 c8 = Category.create :name => 'French'
 c9 = Category.create :name => 'Malaysian'
 c10 = Category.create :name => 'Modern Australian'
+
+r1.categories << c2
+r1.categories << c3
