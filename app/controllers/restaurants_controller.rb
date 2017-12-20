@@ -4,11 +4,12 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.all
-    render :json => @restaurants.to_json()
+    render json: @restaurants, include: 'categories'
   end
 
   def new
     @restaurant = Restaurant.new
+    @restaurants = Restaurant.all
   end
 
   def create
@@ -18,7 +19,7 @@ class RestaurantsController < ApplicationController
 
   def show
     restaurant = Restaurant.find params[:id]
-    render :json => restaurant.to_json()
+    render :json => restaurant.to_json(:include => [:categories])
   end
 
   def edit

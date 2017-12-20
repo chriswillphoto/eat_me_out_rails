@@ -32,6 +32,7 @@ gem 'bcrypt'
 gem 'rack-cors'
 gem 'geocoder'
 gem 'jwt'
+gem 'bootstrap-sass'
 
 
 # Use Capistrano for deployment
