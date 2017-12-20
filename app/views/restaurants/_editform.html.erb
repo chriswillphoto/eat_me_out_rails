@@ -1,15 +1,19 @@
 <%= form_for @restaurant do | f | %>
   <fieldset>
     <%= f.label :name %>
-    <%= f.text_field :name, :required => true, :placeholder => 'Restaurant/Cafe Name' %>
+    <%= f.text_field :name, :required => true, :placeholder => 'Restaurant/Cafe Name', :class => 'formField' %>
+    <br />
     <%= f.label :address %>
-    <%= f.text_field :address, :required => true, :placeholder => 'Follow format: 4 Rock St, Surry Hills, NSW 2010' %>
+    <%= f.text_field :address, :required => true, :placeholder => 'Follow format: 4 Rock St, Surry Hills, NSW 2010', :class => 'formField' %>
+    <br />
     <%= f.label :suburb %>
-    <%= f.text_field :suburb, :required => true, :placeholder => 'Eg. Surry Hills' %>
+    <%= f.text_field :suburb, :required => true, :placeholder => 'Eg. Surry Hills', :class => 'formField' %>
+    <br />
     <%= f.label :description %>
-    <%= f.text_field :description, :required => true, :placeholder => 'Short description' %>
+    <%= f.text_field :description, :required => true, :placeholder => 'Short description', :class => 'formField' %>
+    <br />
     <%= f.label :price %>
-    <%= f.text_field :price, :required => true, :placeholder => 'Follow format: $20-30 a main' %>
+    <%= f.text_field :price, :required => true, :placeholder => 'Follow format: $20-30 a main', :class => 'formField' %>
   </fieldset>
   <label></label>
   <fieldset>
