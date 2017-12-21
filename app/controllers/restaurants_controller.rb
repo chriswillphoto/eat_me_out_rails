@@ -19,7 +19,7 @@ class RestaurantsController < ApplicationController
 
   def show
     restaurant = Restaurant.find params[:id]
-    render :json => restaurant.to_json(:include => {:categories => {:only => :name}, :likes => {}})
+    render :json => restaurant.to_json(:include => {:categories => {:only => :name}, :likes => {}, :dislikes => {}})
   end
 
   def edit
