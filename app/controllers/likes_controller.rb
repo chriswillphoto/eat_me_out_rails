@@ -6,7 +6,7 @@ class LikesController < ApplicationController
     like = Like.new
     like.user_id = @current_user.id
     like.restaurant_id = params[:restaurant_id]
-    like.save
+    like.save 
   end
 
 
