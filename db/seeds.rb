@@ -73,6 +73,12 @@ r22 = Restaurant.create :name => 'Mr Toppers', :address => '222 Campbell Parade,
 
 r23 = Restaurant.create :name => 'Bondi Hardware', :address => '39 Hall Street, Bondi Beach, NSW 2026', :suburb => 'bondi beach', :description => 'A rustic, exposed brick feel that accentuates to an option to a DIY menu. Theres something for any time, including salads, pizzas, sliders and dishes conducive to sharing. New dishes like the Alaskan crab salad with prawn, black rice, coconut and pomegranate, jerk chicken with red quinoa, lentils and cauliflower and Hardware Prawns with chorizo, chilli, wine and garlic served with charred sourdough are our top picks.', :price => '2', :opening_hours => '10am-10pm', :image => 'https://cdn.concreteplayground.com/content/uploads/2016/08/socal-bondi-hardware.jpg', :phone_number => '(02) 9365 7176'
 
+r24 = Restaurant.create :name => 'Cubbys Kitchen', :address => '500 Crown Street, Surry Hills, NSW 2010', :suburb => 'surry hills', :description => 'From succulent lamb kafta with a yoghurt dressing and Lebanese spices, to barramundi with harissa, garlic and sliced almonds. You’ll be so excited by the menu, that you won’t know where to start. Lucky you have your huge family with you, meaning you can have a taste of everything!', :price => '3', :opening_hours => '11am-11pm', :image => 'https://cdn.concreteplayground.com/content/uploads/2016/08/Cubbys-Kitchen-Surry-Hills-Sydney-01.jpeg', :phone_number => '(02) 9225 7186'
+
+r25 = Restaurant.create :name => 'Bad Hombres', :address => '40 Reservoir Street, Surry Hills NSW 2010', :suburb => 'surry hills', :description => 'Anyone who thinks vegan cant be fun needs to both update their opinions from 1998 and also get to Bad Hombres, stat. What started as a Mexican Chinese mash-up with a 60 per cent veg-powered menu has now gone the full vegan and we’re into it.', :price => '1', :opening_hours => '5pm-10pm', :image => 'https://media.timeout.com/images/103914884/image.jpg', :phone_number => '(02) 9888 7276'
+
+r26 = Restaurant.create :name => 'Nour Sydney', :address => '490 Crown Street, Surry Hills, NSW 2010', :suburb => 'surry hills', :description => 'Nour is built on a dream of presenting classic Lebanese flavours in a fresh, exciting way. We’ve all seen what the beautiful tangy tenors of pomegranate molasses do for a salad, we know that we can mould meat on a stick and cook it over coals to make it pack a punch of flavour and all power to the sultry eggplant that shines when dressed as baba ganoush.', :price => '4', :opening_hours => '11am-12am', :image => 'https://cdn.concreteplayground.com/content/uploads/2016/10/Nour-Surry-Hills-Sydney-01.jpeg', :phone_number => '(02) 8234 2676'
+
 
 m1.restaurants << r1
 m1.restaurants << r2
@@ -90,6 +96,7 @@ c8 = Category.create :name => 'Modern Australian'
 c9 = Category.create :name => 'Spanish'
 c10 = Category.create :name => 'Swedish'
 c11 = Category.create :name => 'Mexican'
+c12 = Category.create :name => 'Lebanese'
 
 r1.categories << c2
 r2.categories << c1
@@ -116,3 +123,6 @@ r20.categories << c11
 r21.categories << c3
 r22.categories << c8
 r23.categories << c8
+r24.categories << c12
+r25.categories << c11
+r26.categories << c12
