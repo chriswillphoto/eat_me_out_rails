@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
 
   def create
     category = Category.create category_params
-    redirect_to categories_path
+    redirect_to new_category_path
   end
 
   def edit
@@ -22,13 +22,13 @@ class CategoriesController < ApplicationController
   def update
     category = Category.find params[:id]
     category.update category_params
-    redirect_to categories_path
+    redirect_to new_category_path
   end
 
   def destroy
     category = Category.find params[:id]
     category.destroy
-    redirect_to categories_path
+    redirect_to new_category_path
   end
 
   private
