@@ -12,8 +12,14 @@
     <%= f.label :description %>
     <%= f.text_field :description, :required => true, :placeholder => 'Short description', :class => 'formField' %>
     <br />
+    <%= f.label :opening_hours %>
+    <%= f.text_field :opening_hours, :required => true, :placeholder => '2pm - 5am', :class => 'formField' %>
+    <br />
     <%= f.label :price %>
     <%= f.text_field :price, :required => true, :placeholder => 'Follow format: 1=$ 2=$$ 3=$$$ 4=$$$$', :class => 'formField' %>
+    <br />
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true, :placeholder => 'https://www.image.com', :class => 'formField' %>
   </fieldset>
   <label></label>
   <fieldset>
