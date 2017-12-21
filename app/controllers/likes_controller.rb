@@ -4,8 +4,8 @@ class LikesController < ApplicationController
 
   def create
     like = Like.new
-    like.user_id = params[:like][:user_id]
-    like.restaurant_id = params[:like][:restaurant_id]
+    like.user_id = params[:user_id]
+    like.restaurant_id = params[:restaurant_id]
     like.save
   end
 
