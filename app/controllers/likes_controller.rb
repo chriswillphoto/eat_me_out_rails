@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
 
-  before_action :authenticate_request!
+  before_action :authenticate_request!, :only => [:create, :show]
 
   def create
     like = Like.new
@@ -11,7 +11,7 @@ class LikesController < ApplicationController
 
 
   def destroy
-    like = Like.where(restaurant_id: params[:restaurant_id], user_id: @current_user.id).first
+    like = Like.where(restaurant_id: params[:restaurant_id], user_id: params[:user_id]).first
     like.destroy
   end
 
