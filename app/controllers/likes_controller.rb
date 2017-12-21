@@ -1,17 +1,23 @@
 class LikesController < ApplicationController
 
-  before_action :authenticate_request
+  before_action :authenticate_request!, :only => [:create, :show]
 
   def create
     like = Like.new
-    like.user_id = params[:user_id]
+    like.user_id = @current_user.id
     like.restaurant_id = params[:restaurant_id]
     like.save
   end
 
+
   def destroy
-    like = Like.where(restaurant_id: params[:like][:restaurant_id], user_id: params[:like][:user_id]).first
+    like = Like.where(restaurant_id: params[:restaurant_id], user_id: params[:user_id]).first
     like.destroy
+  end
+
+  def show
+    likes = @current_user.likes.map { |l| l.restaurant.id }
+    render json: likes.to_json()
   end
 
   private

@@ -33,6 +33,9 @@ Rails.application.routes.draw do
   resources :categories
   resources :users
 
+  get '/likes' => 'likes#show'
+  post "/likes" => "likes#create"
+  delete '/likes/:restaurant_id/:user_id' => 'likes#destroy'
   put "/favourites" => "favourites#update"
   put "/maybes" => "maybes#update"
   put "/restaurants/:id/maybe" => "restaurants#update_maybe"
