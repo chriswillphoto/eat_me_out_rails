@@ -36,6 +36,9 @@ Rails.application.routes.draw do
   get '/likes' => 'likes#show'
   post "/likes" => "likes#create"
   delete '/likes/:restaurant_id/:user_id' => 'likes#destroy'
+  get '/dislikes' => 'dislikes#show'
+  post "/dislikes" => "dislikes#create"
+  delete '/dislikes/:restaurant_id/:user_id' => 'dislikes#destroy'
   put "/favourites" => "favourites#update"
   put "/maybes" => "maybes#update"
   put "/restaurants/:id/maybe" => "restaurants#update_maybe"
