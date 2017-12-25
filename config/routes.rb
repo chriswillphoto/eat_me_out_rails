@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :users
 
+  root :to => "restaurants#new"
   get '/likes' => 'likes#show'
   post "/likes" => "likes#create"
   delete '/likes/:restaurant_id/:user_id' => 'likes#destroy'

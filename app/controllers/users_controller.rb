@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       @maybe = Maybe.create({:user_id => @user.id})
       render json: {status: 'Account created successfully'}, status: :created
     else
-      render json: { errors: user.errors.full_messages }, status: :bad_request
+      render json: { errors: @user.errors.full_messages }, status: :bad_request
     end
   end
 
